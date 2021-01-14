@@ -11,7 +11,7 @@
     "MEAN",
     "boardGames"
   ],
-  "author": "Selam Alemseged",
+  "author": "eyob",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
