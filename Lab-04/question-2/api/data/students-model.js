@@ -2,14 +2,9 @@ var mongoose=require("mongoose");
 var addressSchema=new mongoose.Schema({
     street:String,
     city:String,
-    state:{
-        type:String,
-        length:2
-    },
-    zipcode:{
-        type:Number,
-        length:5
-    }
+    state:String,
+        zipcode:String,
+        
 })
 
 
@@ -24,7 +19,7 @@ var studentSchema=mongoose.Schema({
         min:0,
         max:4
     },
-    address:[addressSchema]
+    adress:[addressSchema]
    
 })
 mongoose.model("Student",studentSchema,"Students");
