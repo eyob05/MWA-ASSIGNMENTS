@@ -1,0 +1,23 @@
+
+<H1> This is the Vehicles Data.</H1>
+
+    <ul>
+        <li ng-repeat="Vehicle in vehicleCtrl.vehicle">
+            <strong>Vehicle Name: </strong> : {{Vehicle.Name}}<br/>
+            <strong>Vehicle Year</strong>: {{Vehicle.Year}}<br/>
+    
+            <strong>Show Vehicles Details:</strong>
+            <input type="checkbox" ng-model="showPunchline" />
+            <div ng-show="showPunchline">
+                <i>
+                   <strong>Vehicle's Miles Per Gallon: </strong> {{Vehicle.Miles_per_Gallon}} <BR/>
+                   <strong>Vehicle's Acceleration: </strong> {{Vehicle.Acceleration}}<br/>
+                   <strong>Vehicle's Horsepower: </strong> {{Vehicle.Horsepower}}<br/>
+
+                    
+                </i>
+            </div>
+    
+    
+        </li>
+    </ul>
