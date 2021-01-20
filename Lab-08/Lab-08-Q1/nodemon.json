@@ -1,0 +1,4 @@
+{
+    "igonre" : ["api/controllers/*"],
+    "verbos" : true
+}

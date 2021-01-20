@@ -1,0 +1,17 @@
+<h2>Information about Truck: 
+    <p>{{tk.truck.title}} 
+        <!-- <game-rating stars={{vm.rating}}></game-rating> -->
+    </p>
+</h2>
+
+
+
+<p style="margin-left:20px ;"> 
+
+    vinNumber: {{tk.truck.vinNumber }} <br>
+    year: {{tk.truck.year}}<br>
+    mileage: {{tk.truck.mileage}}<br>
+    color: {{tk.truck.color}}<br>
+    owner: {{tk.truck.owner.firstName | uppercase}} <br>
+    owner birthDate: {{tk.truck.owner.birthDate | date: "MMM-dd -yyyy"}}
+</p>
