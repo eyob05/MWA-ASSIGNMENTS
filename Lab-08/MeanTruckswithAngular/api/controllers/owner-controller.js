@@ -45,15 +45,6 @@ module.exports.updateOwner = function (req, res) {
 }
 var _addowner = function (req, res, truck) {
 
-  console.log("tttttt")
-  console.log(req.body)
-  console.log("truck.owner")
-
-  // truck.owner.firstName = req.body.firstName;
-  // truck.owner.lastNames = req.body.lastName;
-  // truck.owner.birthDate = req.body.birthDate;
-  // truck.owner.address = req.body.address;
-
   truck.owner=req.body
 
   truck.save(function (err, updatedTruck) {
@@ -75,9 +66,9 @@ var _addowner = function (req, res, truck) {
 
 module.exports.addTruckOwner = function (req, res) {
   const truckId = req.params.truckId
-  console.log(truckId)
+ 
   Truck.findById(truckId).select("owner").exec(function (err, truck) {
-    console.log(truck)
+   
     const response = {
       status: 200,
       message: truck
@@ -90,9 +81,7 @@ module.exports.addTruckOwner = function (req, res) {
         response.message = { "message": "Game Id not found" };
     }
     if (truck) {
-      console.log("truck checking")
-      console.log(truck)
-      console.log("truck checking")
+      
       _addowner(req, res, truck);
     } else {
       res.status(response.status).json(response.message);
