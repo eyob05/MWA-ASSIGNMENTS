@@ -6,7 +6,6 @@ function TrucksController(TruckDataFactory){
 
     TruckDataFactory.getAllTrucks()
         .then(function(response){
-            console.log(response)
             tk.trucks = response;
         });
 }

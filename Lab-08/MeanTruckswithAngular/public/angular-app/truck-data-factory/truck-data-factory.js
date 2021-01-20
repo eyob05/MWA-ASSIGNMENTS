@@ -15,8 +15,7 @@ function TruckDataFactory($http){
     }
 
     function complete(response){
-        // console.log(response.data);
-        console.log("inside complete")
+       console.log("inside complete")
         return response.data;
     }
 
