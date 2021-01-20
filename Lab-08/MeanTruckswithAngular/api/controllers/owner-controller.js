@@ -102,9 +102,7 @@ module.exports.deleteOwner = function (req, res) {
       response.status = 404,
         response.message = { "message": "truck Id not found" };
     }
-    // if (response.status !== 204) {
-    //   res.status(response.status).json(response.message);
-
+    
      else {
       _deletePublisher(req, res, truck);
     }
