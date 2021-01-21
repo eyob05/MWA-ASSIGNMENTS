@@ -1,0 +1,26 @@
+<h1>{{vm.title}}</h1>
+
+<ul>
+    <li ng-repeat="game in vm.games">
+        <a ng-href="#!/game/{{game._id}}">{{game.title}}</a>  <a ng-href="#!/game/{{game._id}}/delete"><button>delete</button></a>
+    </li>
+</ul>
+<form name="vm.gameForm" ng-submit="vm.addGame()" style="margin-left: 20px">
+    To add a new game please fill in all the fields below:<BR/>
+    title:<input type="text" name="title" required ng-model="vm.newGametitle" style="color:black"  /><BR/>
+    <!-- <span ng-show="tk.truckForm.vinNumber.$dirty && tk.truckForm.vinNumber.$invalid" style="color: red;">This feild requires 9 digits.</span><BR/> -->
+    price:<input type="text" name="price" required ng-model="vm.newGameprice" style="color:black"/><BR/>
+    designers:<input type="text" name="designers" required ng-model="vm.newGamedesigners" style="color:black"/><BR/>
+    minPlayers :<input type="number" name="minPlayers" required ng-model="vm.newGameminPlayers" style="color:black" ng-min=1 ng-max=4 />
+    <span ng-show="vm.gameForm.minPlayers.$dirty && vm.gameForm.minPlayers.$invalid" style="color: red;">
+        The min players must be 1 and 4
+     </span><BR/>
+    maxPlayers:<input type="number" name="maxPlayers" required ng-model="vm.newGamemaxPlayers" style="color:black" ng-min ="1" ng-max="10" />
+    <span ng-show="vm.gameForm.maxPlayers.$dirty && vm.gameForm.maxPlayers.$invalid" style="color: red;">
+        The max players must be between 1 and 10
+     </span><BR/>
+    rate:<input type="number" name="rate" required ng-model="vm.newGamerate" style="color:black" ng-min=1 ng-max=5 />
+    <span ng-show="vm.gameForm.rate.$dirty && vm.gameForm.rate.$invalid" style="color: red;">The Rating players must be 1 and 5</span><BR/>
+
+           <button type="submit" class="btn-success">Add New Truck</button><BR/>
+</form>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="meanTrucks">
+    <head>
+        <!-- <title>MEAN Trucks</title> -->
+        <link rel = "stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+
+   
+    </head>
+
+    <body>
+
+        <h1>MEAN Trucks homepage</h1>
+
+        <div ng-view style="font-size: large;"></div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <p class="test-muted text-center">
+                    <a href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.spiel-modellkistl.de%2Fen%2FScalemodel-Manufacturer%2FFirst-Gear%2FPETERBILT-379-63-Sleeper-with-WABASH-Box-Trailer-red-chrome.html&psig=AOvVaw2BbbqhTvxiOenOeLurSoq7&ust=1611200325756000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCU0orLqe4CFQAAAAAdAAAAABAa" target="_blank">
+                        <img src="/images/truck-image.jpg" height="60" alt="MIU compro"></a>
+                    <br>
+                    <small class="text black-50 text-center">
+                        &copy; 2021 Eyob Trucking Company. All Rights Reserved.
+                    </small>
+                </p>
+            </div>
+        </footer>
+
+        <script src="jquery/jquery-3.5.1.min.js"></script>
+        <script src="angular/angular.js"></script>
+        <script src="angular-route/angular-route.js"></script>
+        <script src="angular-app/app.js"></script>
+        <script src="angular-app/truck-data-factory/truck-data-factory.js"></script>
+        <script src="angular-app/truck-list/truck-list-controller.js"></script>
+        <script src="angular-app/truck-display/truck-display-controller.js"></script> 
+         <script src="angular-app/truck-delete/truck-delete-controller.js"></script>
+
+
+    </body>
+</html>
