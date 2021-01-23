@@ -1,0 +1,13 @@
+<h1> {{jb.title}}</h1>
+
+<h4 style="margin-left: 30px;">
+   Salary: {{jb.job.salary | currency}}<br/>
+   Description:{{jb.job.description}}<br/>
+   Experience:{{jb.job.experience}}<br/>
+   Skills:{{jb.job.skills}}<br/>
+   postDate:{{jb.job.postDate | date:"MM-dd-yyyy"}}<br/>
+   Location:{{jb.job.location.street}},
+            {{jb.job.location.city}},
+            {{jb.job.location.state}},
+            {{jb.job.location.zipcode}}
+</h4>

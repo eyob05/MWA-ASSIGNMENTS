@@ -1,0 +1,21 @@
+<h1>{{jb.title}}</h1>
+<ul>
+    <ui ng-repeat="job in jb.jobs">
+     <a ng-href="#!/job/{{job._id}}">{{job.title}}</a> <a   ng-href="#!/job/{{job._id}}/delete" style="margin-left: 1%;" ng-click= "jb.reloadData()">Delete</a><BR/>
+    </ui>
+</ul>
+  To Add A New Job Please Fill In All The Fields Below:<BR/>
+<form name="jb.jobForm" ng-submit="jb.addJob()" style="margin-left: 20px">
+   
+    Title:<input type="text" name="title" required ng-model="jb.newJobtitle" style="color:black"  /><BR/>
+    
+    Salary:<input type="text" name="salary" required ng-model="jb.newJobsalary" style="color:black"/><BR/>
+
+    Description:<input type="text" name="description" required ng-model="jb.newJobdescription" style="color:black"/><BR/>
+
+    Experience:<input type="text" name="experience" required ng-model="jb.newJobexperience" style="color:black"/><BR/>
+
+    Skills:<input type="text" name="skills" required ng-model="jb.newJobskills" style="color:black"/><BR/>
+    <!-- PostDate:<input type="text" name="postDate" required ng-model="tk.newTruckowner" style="color:black"/><BR/> -->
+           <button type="submit" class="btn-success">Add New Job</button><BR/>
+</form>
