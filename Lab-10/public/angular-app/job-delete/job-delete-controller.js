@@ -7,8 +7,8 @@ function JobDeleteController($routeParams,$window,JobDataFactory){
 
          JobDataFactory.deleteJob(id).then(function(response){
 
-            // $window.alert("Record Deleted");
-            // $window.location.href='/'
+            $window.alert("Record Deleted");
+            $window.location.href='/'
 
             console.log("delted")
             

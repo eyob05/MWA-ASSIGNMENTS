@@ -8,10 +8,7 @@ function JobsController($route,JobDataFactory){
     jb.reloadData=function(){
         $route.reload();
     }
-
-
-
-    JobDataFactory.getAllJobs()
+   JobDataFactory.getAllJobs()
         .then(function (response) {
             //  console.log(response)
             jb.jobs = response;
