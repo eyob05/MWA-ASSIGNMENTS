@@ -1,0 +1,54 @@
+<nav ng-controller="LoginController as tk" class="navbar navbar-expand-lg navbar-fixed-top bg-dark" nginit="tk.init()">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                ariaexpanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#!/">Meantrucks</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="tk.isActiveTab('')" class="active">
+                    <a href="#!/">Home</a>
+                </li>
+                <li ng-class="tk.isActiveTab('trucks')" ng-if="tk.isLoggedIn()">
+                    <a href="#!/trucks">trucks</a>
+                </li>
+                <li ng-class="tk.isActiveTab('register')" ng-if="!tk.isLoggedIn()">
+                    <a href="#!/register">Register</a>
+                </li>
+                <li ng-class="tk.isActiveTab('profile')" ng-if="tk.isLoggedIn()">
+                    <a href="#!/profile">Profile</a>
+                </li>
+            </ul>
+
+            <div class="col-xs-6">
+                <form ng-if="!tk.isLoggedIn()" class="navbar-form navbar-right" role="login" ng-submit="tk.login()">
+                    <div class="form-group" ng-class="{'has-error': tk.err}">
+                        <input type="text" class="form-control input-sm" placeholder="Username" ng-model="tk.username"
+                            autocapitalize="none" />
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': tk.err}">
+                        <input type="password" class="form-control input-sm" placeholder="Password"
+                            ng-model="tk.password" autocapitalize="none" />
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-success">Login</button>
+                </form>
+            </div>
+            <ul ng-if="tk.isLoggedIn()" class="new navbar-nav navbar-right">
+                <li>
+                    <p class="navbar-text">Welcome {{tk.loggedInUser}}</p>
+                </li>
+                <li>
+                    <button class="navbar-btn btn-sm btn-info" ng-click="tk.logout()">
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

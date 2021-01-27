@@ -13,11 +13,14 @@ module.exports.getAllJobs = function (req, res) {
         }
         if (err) {
             response.status = 500;
-            response.message = "error in finding jobs";  //{message:"error "}
+            response.message = err;  //{message:"error "}
 
-        } else {
-            res.status(response.status).json(response.message)
+        } else if(!jobs){
+            response.status = 404;
+            response.message = "error found"; 
+            
         }
+        res.status(response.status).json(response.message)
     })
 }
 module.exports.addOneJob = function (req, res) {
@@ -38,10 +41,12 @@ module.exports.addOneJob = function (req, res) {
             }
             if (err) {
                 response.status = 500;
+                response.message = err;
+            } else if(!job){
+                response.status = 404;
                 response.message = "error in adding a job"
-            } else {
+                }
                 res.status(response.status).json(response.message)
-            }
         });
     } else {
         res.status(500).json("please fill the required fields")

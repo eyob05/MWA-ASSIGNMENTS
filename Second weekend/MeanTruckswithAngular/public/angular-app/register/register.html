@@ -1,0 +1,28 @@
+<h1>Register</h1>
+<div ng-if="tk.message" class="alert alert-success" role="alert">
+    <p>{{ tk.message}}</p>
+</div>
+<div ng-if="tk.err" class="alert alert-danger" role="alert">{{tk.err}}</div>
+<form ng-hide="tk.message" name="register" ng-submit="tk.register()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name" ng-model="tk.name"
+            autocapitalize="none" />
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" ng-model="tk.username"
+            autocapitalize="none" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="tk.password"
+            autocapitalize="none" />
+    </div>
+    <div class="form-group">
+        <label for="password-repeat">Repeat Password</label>
+        <input type="password" class="form-control" id="password-repeat" placeholder="Password"
+            ng-model="tk.passwordRepeat" autocapitalize="none" />
+    </div>
+    <button type="submit" class="btn btn-success">Register</button>
+</form>

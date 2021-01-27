@@ -1,0 +1,22 @@
+<div ng-if="tk.isLoggedIn()">
+ <h1>{{tk.title}}</h1>
+
+<ul>
+    <li ng-repeat="truck in tk.trucks">
+        <a ng-href="#!/truck/{{truck._id}}">{{truck.model}}</a> <a ng-href="#!/truck/{{truck._id}}/delete" style="display: inline-block;"><button >delete</button> </a>
+    </li>
+</ul>
+
+
+<form name="tk.truckForm" ng-submit="tk.addTruck()" style="margin-left: 20px">
+    To add a new truck please fill in all the fields below:<BR/>
+    VinNumber:<input type="text" name="vinNumber" required ng-model="tk.newTruckvinNumber" style="color:black" pattern="[0-9]{9}" />
+    <span ng-show="tk.truckForm.vinNumber.$dirty && tk.truckForm.vinNumber.$invalid" style="color: red;">This feild requires 9 digits.</span><BR/>
+    Model:<input type="text" name="model" required ng-model="tk.newTruckmodel" style="color:black"/><BR/>
+    Year:<input type="text" name="year" required ng-model="tk.newTruckyear" style="color:black"/><BR/>
+    Mileage:<input type="text" name="mileage" required ng-model="tk.newTruckmileage" style="color:black"/><BR/>
+    Color:<input type="text" name="color" required ng-model="tk.newTruckcolor" style="color:black"/><BR/>
+    <!-- owner:<input type="text" name="owner" required ng-model="tk.newTruckowner" style="color:black"/><BR/> -->
+           <button type="submit" class="btn-success">Add New Truck</button><BR/>
+</form>
+

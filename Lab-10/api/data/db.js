@@ -12,15 +12,15 @@ mongoose.connection.on("connected", function () {
 mongoose.connection.on("error", function (err) {
     console.log("MOngoose is disconnected to " + err);
 });
-process.on("SIGINT", function () {
-    mongoose.connection.close(function () {
-        console.log("mongoose is disconnected by CTRL + C");
-        process.exit(0);
-    });
-});
-process.on("SIGTERM", function () {
-    mongoose.connection.close(function () {
-        console.log("mongoose is disconnected by CTRL + C");
-        process.exit(0);
-    });
-});
+// process.on("SIGINT", function () {
+//     mongoose.connection.close(function () {
+//         console.log("mongoose is disconnected by CTRL + C");
+//         process.exit(0);
+//     });
+// });
+// process.on("SIGTERM", function () {
+//     mongoose.connection.close(function () {
+//         console.log("mongoose is disconnected by CTRL + C");
+//         process.exit(0);
+//     });
+// });
