@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/custom.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+<body> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Student Atendance App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <button class="nav-link" style="background: darkolivegreen;" [routerLink]="['faculty']">Faculty
+                <span class="sr-only">(current)</span>
+              </button>
+            </li>
+            <li class="nav-item active">
+              <button class="nav-link"  style="background: darkolivegreen;" routerLink="/student">Student</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <router-outlet></router-outlet>
+    
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Student Login</h3>
+                     </div>
+                      <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form" action="/api/studentmainpage">
+                        <fieldset>
+                              <div class="form-group">
+                                <input class="form-control" placeholder="Username" name="Username" type="text">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-success btn-block" type="submit">Login</button> 
+                        </fieldset>
+                          </form>
+                          <hr/>
+                        <h4>OR</h4>
+                        <form action="/api/createStudent">
+                        <button class="btn btn-lg btn-success btn-block" type="submit">Register New Student</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <footer class="footer">
+        <div class="container">
+          <p class="test-muted text-center">
+            <a href="https://compro.miu.edu" target="_blank">
+              <img src="/images/compro-web-logo-442x112.png" height="60" alt="MIU Compro" /></a>
+            <br />
+            <small class="text black 50 text center">&copy; 2020 Maharishi International University. All Rights
+              Reserved.
+            </small>
+          </p>
+        </div>
+      </footer> -->
+<!-- </body>
+</html> -->

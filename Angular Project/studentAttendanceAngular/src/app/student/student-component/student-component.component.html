@@ -1,0 +1,65 @@
+<!-- <p>student-component works!</p> -->
+<h1> WelCome Mr {{students.firstName}}   {{students.lastName}}</h1>
+<!-- <button (click)="getStudents()">AllStudents</button> -->
+<!-- <ul>
+    <li *ngFor="let student of students">
+           
+    </li>
+</ul> -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- <div class="btn-toolbar">
+    <button class="btn btn-primary" (click)='addCourse()'>Add Course</button>
+    <button class="btn" (click)='showAttendance()'>Attendance</button>
+    <button class="btn" (click)='showCurrentCourses()'>Current Courses</button>
+</div> -->
+
+<!-- <router-outlet></router-outlet> -->
+
+<div class="container contact">
+<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+				<h2>Photo</h2>
+				<h4>Student Detail</h4>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-5" for="fname">Student ID: {{students.studentId}}</label>
+				  <!-- <div class="col-sm-10">          
+					</div> -->
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-5" for="lname">Last Name: {{students.firstName}}</label>
+				  <!-- <div class="col-sm-10">          
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+				  </div> -->
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-5" for="email">Last Name: {{students.lastName}}</label>
+				  <!-- <div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+				  </div> -->
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="comment">Comment:</label>
+				  <div class="col-sm-10">
+					<textarea class="form-control" rows="5" id="comment"></textarea>
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
